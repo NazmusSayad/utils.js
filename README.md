@@ -6,7 +6,7 @@ randomOfArray = (t = [!1, !0]) => t[Math.floor(Math.random() * t.length)]
 
 <hr /> 
 
-## arrayOfObjectSort
+## Sort an array of object by a object key
 parameter: Object, Key, Descending or Ascending
 ```javascript
  arrayOfObjectSort = (t, e, n) =>
@@ -15,7 +15,7 @@ parameter: Object, Key, Descending or Ascending
 
 <hr /> 
 
-## ageCalculator
+## Calculate Age
 parameter: MM/DD/YYYY
 ```javascript
  ageCalculator = (t) => {
@@ -36,7 +36,7 @@ parameter: MM/DD/YYYY
 
 <hr /> 
 
-## nodeSelect
+## Select a node in DOM
 parameter: Element
 ```javascript
  nodeSelect = (t) => {
@@ -54,7 +54,7 @@ parameter: Element
 
 <hr /> 
 
-## nodeVisible
+## Check if a node is visible in DOM
 parameter: Element
 ```javascript
  nodeVisible = (t) => {
@@ -65,7 +65,7 @@ parameter: Element
 
 <hr /> 
 
-## nodeListSort
+## Sort a list of nodes
 parameter: Selectors
 ```javascript
  nodeListSort = (t) => {
@@ -83,7 +83,7 @@ parameter: Selectors
 
 <hr /> 
 
-## json
+## Import JSON
 parameter: Src, After Load()
 ```javascript
  json = (t, e) => {
@@ -97,7 +97,7 @@ parameter: Src, After Load()
 
 <hr /> 
 
-## randomNumber
+## Get a Random Number
 parameter: Maximum, Minimum
 ```javascript
  randomNumber = (t = 1, e = 0) => Math.floor(Math.random() * (t - e + 1) + e)
@@ -105,7 +105,7 @@ parameter: Maximum, Minimum
 
 <hr /> 
 
-## html
+## HTML Create Element
 parameter: Parent, InnerHTML, Class, Id
 ```javascript
  html = (t = "div", e = "", n = "", o = "") => {
@@ -116,7 +116,7 @@ parameter: Parent, InnerHTML, Class, Id
 
 <hr /> 
 
-## timeDate
+## Get Current Time and Date
 parameter: IF Seconds, new Date()
 ```javascript
  timeDate = (t = !0, e = new Date()) => {
@@ -129,7 +129,7 @@ parameter: IF Seconds, new Date()
 
 <hr /> 
 
-## typeWriter
+## TypeWirter
 parameter: Element, Text, Write Speed, Clear Speed, Write Delay, Clear Delay, Count, Clean Before Start, After Limit()
 ```javascript
  typeWriter = (t, e = [], n = 75, o = 50, r = 500, i = 1e3, a = !1, s = !0, c = () => {}) => {
@@ -152,7 +152,7 @@ parameter: Element, Text, Write Speed, Clear Speed, Write Delay, Clear Delay, Co
 
 <hr /> 
 
-## cookie
+## Cookie Function
 parameter: Key, Value, Day, Hour, Minute, Second
 ```javascript
  cookie = function (t, e, n = 0, o = 0, r = 0, i = 0) {
