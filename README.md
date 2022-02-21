@@ -4,6 +4,7 @@ parameter: Array
 randomOfArray = (t = [!1, !0]) => t[Math.floor(Math.random() * t.length)]
 ```
 
+<br /> 
 
 # arrayOfObjectSort
 parameter: Object, Key, Descending or Ascending
@@ -12,6 +13,7 @@ parameter: Object, Key, Descending or Ascending
     n ? t.sort((t, n) => (n[e] > t[e] ? 1 : t[e] > n[e] ? -1 : 0)) : t.sort((t, n) => (t[e] > n[e] ? 1 : n[e] > t[e] ? -1 : 0))
 ```
 
+<br /> 
 
 # ageCalculator
 parameter: MM/DD/YYYY
@@ -32,6 +34,7 @@ parameter: MM/DD/YYYY
   }
 ```
 
+<br /> 
 
 # nodeSelect
 parameter: Element
@@ -49,6 +52,7 @@ parameter: Element
   }
 ```
 
+<br /> 
 
 # nodeVisible
 parameter: Element
@@ -59,6 +63,7 @@ parameter: Element
   }
 ```
 
+<br /> 
 
 # nodeListSort
 parameter: Selectors
@@ -76,6 +81,7 @@ parameter: Selectors
   }
 ```
 
+<br /> 
 
 # json
 parameter: Src, After Load()
@@ -89,6 +95,7 @@ parameter: Src, After Load()
   }
 ```
 
+<br /> 
 
 # randomNumber
 parameter: Maximum, Minimum
@@ -96,6 +103,7 @@ parameter: Maximum, Minimum
  randomNumber = (t = 1, e = 0) => Math.floor(Math.random() * (t - e + 1) + e)
 ```
 
+<br /> 
 
 # html
 parameter: Parent, InnerHTML, Class, Id
@@ -106,6 +114,7 @@ parameter: Parent, InnerHTML, Class, Id
   }
 ```
 
+<br /> 
 
 # timeDate
 parameter: IF Seconds, new Date()
@@ -118,6 +127,7 @@ parameter: IF Seconds, new Date()
   }
 ```
 
+<br /> 
 
 # typeWriter
 parameter: Element, Text, Write Speed, Clear Speed, Write Delay, Clear Delay, Count, Clean Before Start, After Limit()
@@ -140,6 +150,7 @@ parameter: Element, Text, Write Speed, Clear Speed, Write Delay, Clear Delay, Co
   }
 ```
 
+<br /> 
 
 # cookie
 parameter: Key, Value, Day, Hour, Minute, Second
