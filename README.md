@@ -155,26 +155,34 @@ parameter: Element, Text, Write Speed, Clear Speed, Write Delay, Clear Delay, Co
 ## Cookie Function
 parameter: Key, Value, Day, Hour, Minute, Second
 ```javascript
- cookie = function (t, e, n = 0, o = 0, r = 0, i = 0) {
-    switch (arguments.length) {
-      case 1:
-        {
-          let e = t + "=",
-            n = document.cookie.split(";")
-          for (let t = 0; t < n.length; t++) {
-            let o = n[t]
-            for (; " " == o.charAt(0); ) o = o.substring(1)
-            if (0 == o.indexOf(e)) return o.substring(e.length, o.length)
-          }
-          return ""
-        }
-        break
-      default:
-        {
-          const a = new Date()
-          a.setTime(a.getTime() + (864e5 * n + 36e5 * o + 6e4 * r + 1e3 * i)), (document.cookie = t + "=" + e + ";expires=" + a.toUTCString() + ";path=/")
-        }
-        break
+cookie = {
+  get: (key) => {
+    let name = key + "=";
+    let ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
     }
-  }
+    return null;
+  },
+  set: (key, value, day = 365, hour = 0, minute = 0, second = 0) => {
+    const d = new Date();
+    d.setTime(
+      d.getTime() +
+        (day * 86400000 + hour * 3600000 + minute * 60000 + second * 1000)
+    );
+    document.cookie =
+      key + "=" + value + ";" + "expires=" + d.toUTCString() + ";path=/";
+  },
+  remove: (key) => {
+    document.cookie = key + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+  },
+};
+
 ```
