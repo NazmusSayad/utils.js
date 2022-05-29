@@ -15,7 +15,7 @@ const createElement = (type, options = {}) => {
   const element = document.createElement(type)
   Object.entries(options).forEach(([key, value]) => {
     if (key === "class") {
-      element.classList.add(value)
+      element.setAttribute('class', value)
       return
     }
 
@@ -26,8 +26,8 @@ const createElement = (type, options = {}) => {
       return
     }
 
-    if (key === "text") {
-      element.textContent = value
+    if (key === "html" || key === "HTML") {
+      element.innerHTML = value
       return
     }
 
