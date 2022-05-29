@@ -15,7 +15,7 @@ const createElement = (type, options = {}) => {
   const element = document.createElement(type)
   Object.entries(options).forEach(([key, value]) => {
     if (key === "class") {
-      element.setAttribute('class', value)
+      element.setAttribute("class", value)
       return
     }
 
