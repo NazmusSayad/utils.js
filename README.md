@@ -3,14 +3,12 @@ const qs = (selector, parent = document) => {
   return parent.querySelector(selector)
 }
 ```
-<hr /> 
 
 ```javascript
 const qsa = (selector, parent = document) => {
   return [...parent.querySelectorAll(selector)]
 }
 ```
-<hr /> 
 
 ```javascript
 const createElement = (type, options = {}) => {
@@ -38,7 +36,6 @@ const createElement = (type, options = {}) => {
   return element
 }
 ```
-<hr /> 
 
 ```javascript
 const sleep = (duration) => {
@@ -47,7 +44,6 @@ const sleep = (duration) => {
   })
 }
 ```
-<hr /> 
 
 ```javascript
 const typeWriter = (element, txt = [], wS = 75, cS = 50, wD = 500, cD = 1000, count = false, clean = true, fn = () => {}) => {
@@ -88,7 +84,6 @@ const typeWriter = (element, txt = [], wS = 75, cS = 50, wD = 500, cD = 1000, co
   else write()
 }
 ```
-<hr /> 
 
 ```javascript
 const timeDate = (ifSec = true, current = new Date()) => {
@@ -113,21 +108,18 @@ const timeDate = (ifSec = true, current = new Date()) => {
   }
 }
 ```
-<hr /> 
 
 ```javascript
 const randomNumber = (max = 1, min = 0) => {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 ```
-<hr /> 
 
 ```javascript
 const randomOfArray = (array = [false, true]) => {
   return array[Math.floor(Math.random() * array.length)]
 }
 ```
-<hr /> 
 
 ```javascript
 const nodeVisible = (element) => {
@@ -137,7 +129,6 @@ const nodeVisible = (element) => {
   else return false
 }
 ```
-<hr /> 
 
 ```javascript
 const ageCalculator = (mdyy) => {
@@ -171,7 +162,6 @@ const ageCalculator = (mdyy) => {
   return { B: dob, D: dateAge, M: monthAge, Y: yearAge }
 }
 ```
-<hr /> 
 
 ```javascript
 const arrayOfObjectSort = (object, key, sort) => {
@@ -179,7 +169,6 @@ const arrayOfObjectSort = (object, key, sort) => {
   return object.sort((b, a) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
 }
 ```
-<hr /> 
 
 ```javascript
 const cookie = Object.seal({
@@ -207,7 +196,6 @@ const cookie = Object.seal({
   },
 })
 ```
-<hr /> 
 
 ```javascript
 const html = (parent = "div", innerH = "", classs = "", iddd = "") => {
@@ -218,7 +206,6 @@ const html = (parent = "div", innerH = "", classs = "", iddd = "") => {
   return parentE
 }
 ```
-<hr /> 
 
 ```javascript
 const json = (src, func) => {
@@ -229,7 +216,6 @@ const json = (src, func) => {
     })
 }
 ```
-<hr /> 
 
 ```javascript
 const nodeListSort = (selectors) => {
@@ -252,7 +238,6 @@ const nodeListSort = (selectors) => {
   }
 }
 ```
-<hr /> 
 
 ```javascript
 const nodeSelect = (element) => {
@@ -270,5 +255,4 @@ const nodeSelect = (element) => {
   return element.textContent.trim()
 }
 ```
-<hr /> 
 
