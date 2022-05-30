@@ -1,14 +1,21 @@
+#
+### document.querySelector()
+
 ```javascript
 const qs = (selector, parent = document) => {
   return parent.querySelector(selector)
 }
 ```
+#
+### document.querySelectorAll()
 
 ```javascript
 const qsa = (selector, parent = document) => {
   return [...parent.querySelectorAll(selector)]
 }
 ```
+#
+### document.createElement()
 
 ```javascript
 const createElement = (type, html = "", options = {}) => {
@@ -33,6 +40,8 @@ const createElement = (type, html = "", options = {}) => {
   return element
 }
 ```
+#
+### Sleep For A While
 
 ```javascript
 const sleep = (duration) => {
@@ -41,6 +50,8 @@ const sleep = (duration) => {
   })
 }
 ```
+#
+### Type In Your Document
 
 ```javascript
 const typeWriter = (element, txt = [], wS = 75, cS = 50, wD = 500, cD = 1000, count = false, clean = true, fn = () => {}) => {
@@ -81,6 +92,8 @@ const typeWriter = (element, txt = [], wS = 75, cS = 50, wD = 500, cD = 1000, co
   else write()
 }
 ```
+#
+### Get You Current Date
 
 ```javascript
 const timeDate = (ifSec = true, current = new Date()) => {
@@ -105,27 +118,40 @@ const timeDate = (ifSec = true, current = new Date()) => {
   }
 }
 ```
+#
+###  Get A Random Number
 
 ```javascript
 const randomNumber = (max = 1, min = 0) => {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 ```
+#
+### Get A Random Item From An Array
 
 ```javascript
 const randomOfArray = (array = [false, true]) => {
   return array[Math.floor(Math.random() * array.length)]
 }
 ```
+```javascript
+Array.prototype.random = function () {
+  return this[[Math.floor(Math.random() * this.length)]]
+}
+```
+#
+### If If The Node Is Visible On Viewport
 
 ```javascript
 const nodeVisible = (element) => {
   const position = element.getBoundingClientRect()
-  if (position.top >= 0 && position.bottom <= window.innerHeight) return true
-  else if (position.top < window.innerHeight && position.bottom >= 0) return "true"
+  if (position.top >= 0 && position.bottom <= innerHeight) return true
+  else if (position.top < innerHeight && position.bottom >= 0) return "true"
   else return false
 }
 ```
+#
+### Calculate You Age
 
 ```javascript
 const ageCalculator = (mdyy) => {
@@ -159,13 +185,17 @@ const ageCalculator = (mdyy) => {
   return { B: dob, D: dateAge, M: monthAge, Y: yearAge }
 }
 ```
+#
+### Sort It
 
 ```javascript
-const arrayOfObjectSort = (object, key, sort) => {
+const sortArrayOfObejctByKey = (object, key, sort) => {
   if (!sort) return object.sort((a, b) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
   return object.sort((b, a) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
 }
 ```
+#
+### Cookie Pro
 
 ```javascript
 const cookie = Object.seal({
@@ -193,9 +223,11 @@ const cookie = Object.seal({
   },
 })
 ```
+#
+### Document.Createelement()
 
 ```javascript
-const html = (parent = "div", innerH = "", classs = "", iddd = "") => {
+const createElement = (parent = "div", innerH = "", classs = "", iddd = "") => {
   const parentE = document.createElement(parent.trim())
   if (classs !== "") parentE.setAttribute("class", classs.trim())
   if (iddd !== "") parentE.setAttribute("id", iddd.trim())
@@ -203,6 +235,8 @@ const html = (parent = "div", innerH = "", classs = "", iddd = "") => {
   return parentE
 }
 ```
+#
+### Fetch Json
 
 ```javascript
 const json = (src, func) => {
@@ -213,6 +247,8 @@ const json = (src, func) => {
     })
 }
 ```
+#
+### Sort A List Of Node
 
 ```javascript
 const nodeListSort = (selectors) => {
@@ -235,6 +271,8 @@ const nodeListSort = (selectors) => {
   }
 }
 ```
+#
+### Select A Node In Dom
 
 ```javascript
 const nodeSelect = (element) => {
@@ -252,4 +290,3 @@ const nodeSelect = (element) => {
   return element.textContent.trim()
 }
 ```
-
