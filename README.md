@@ -11,8 +11,10 @@ const qsa = (selector, parent = document) => {
 ```
 
 ```javascript
-const createElement = (type, options = {}) => {
+const createElement = (type, html = "", options = {}) => {
   const element = document.createElement(type)
+  element.innerHTML = html
+
   Object.entries(options).forEach(([key, value]) => {
     if (key === "class") {
       element.setAttribute("class", value)
@@ -23,11 +25,6 @@ const createElement = (type, options = {}) => {
       Object.entries(value).forEach(([dataKey, dataValue]) => {
         element.dataset[dataKey] = dataValue
       })
-      return
-    }
-
-    if (key === "html" || key === "HTML") {
-      element.innerHTML = value
       return
     }
 
