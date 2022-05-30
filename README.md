@@ -150,6 +150,14 @@ const nodeVisible = (element) => {
   else return false
 }
 ```
+```javascript
+Element.prototype.isVisible= function() {
+  const position = this.getBoundingClientRect()
+  if (position.top >= 0 && position.bottom <= innerHeight) return true
+  else if (position.top < innerHeight && position.bottom >= 0) return "true"
+  else return false
+}
+```
 #
 ### Calculate You Age
 
@@ -192,6 +200,18 @@ const ageCalculator = (mdyy) => {
 const sortArrayOfObejctByKey = (object, key, sort) => {
   if (!sort) return object.sort((a, b) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
   return object.sort((b, a) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
+}
+```
+```javascript
+const sortArrayOfObejctByKey = (object, key, sort) => {
+  if (!sort) return object.sort((a, b) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
+  return object.sort((b, a) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
+}
+```
+```javascript
+Array.prototype.sortByKey = function(key, sort) {
+  if (!sort) return this.sort((a, b) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
+  return this.sort((b, a) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0))
 }
 ```
 #
