@@ -143,7 +143,7 @@ Array.prototype.random = function () {
 ### If If The Node Is Visible On Viewport
 
 ```javascript
-const nodeVisible = (element) => {
+const isVisible = (element) => {
   const position = element.getBoundingClientRect()
   if (position.top >= 0 && position.bottom <= innerHeight) return true
   else if (position.top < innerHeight && position.bottom >= 0) return "true"
@@ -151,11 +151,13 @@ const nodeVisible = (element) => {
 }
 ```
 ```javascript
-Element.prototype.isVisible= function() {
-  const position = this.getBoundingClientRect()
-  if (position.top >= 0 && position.bottom <= innerHeight) return true
-  else if (position.top < innerHeight && position.bottom >= 0) return "true"
-  else return false
+const isVisible = (element) => {
+  const position = element.getBoundingClientRect()
+
+  if (position.top >= 0 && position.bottom <= innerHeight) return 3
+  if (position.top < 0 && position.bottom > 0 && position.bottom < innerHeight) return 2
+  if (position.top >= 0 && position.top < innerHeight && position.bottom > innerHeight) return 1
+  return 0
 }
 ```
 #
