@@ -51,7 +51,7 @@ const createElement = (parent = "div", innerH = "", classs = "", iddd = "") => {
    const parentE = document.createElement(parent.trim())
    if (classs !== "") parentE.setAttribute("class", classs.trim())
    if (iddd !== "") parentE.setAttribute("id", iddd.trim())
-   parentE.innerHTML = innerH.trim()
+   parentE.innerHTML = innerH
    return parentE
 }
 ```
@@ -59,8 +59,16 @@ const createElement = (parent = "div", innerH = "", classs = "", iddd = "") => {
 ```javascript
 const html = (body) => {
    const element = document.createElement(`template`)
-   element.innerHTML = body[0].trim()
+   element.innerHTML = body[0]
    return element.content
+}
+```
+
+```javascript
+const html = (body) => {
+   const element = document.createElement(`template`)
+   element.innerHTML = body[0]
+   return element.content.firstElementChild
 }
 ```
 
