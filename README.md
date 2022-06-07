@@ -58,7 +58,7 @@ const createElement = (parent = "div", innerH = "", classs = "", iddd = "") => {
 
 ```javascript
 const html = (body) => {
-   const element = document.createElement(`template`)
+   const element = document.createElement('template')
    element.innerHTML = body[0]
    return element.content
 }
@@ -66,7 +66,7 @@ const html = (body) => {
 
 ```javascript
 const html = (body) => {
-   const element = document.createElement(`template`)
+   const element = document.createElement('template')
    element.innerHTML = body[0]
    return element.content.firstElementChild
 }
