@@ -20,6 +20,25 @@ const qsa = (selector, parent = document) => {
 
 #
 
+### document.querySelectorAll() && document.querySelector()
+
+```javascript
+Document.prototype.qs = function (selector) {
+   return this.querySelector(selector)
+}
+Element.prototype.qs = function (selector) {
+   return this.querySelector(selector)
+}
+Document.prototype.qsa = function (selector) {
+   return [...this.querySelectorAll(selector)]
+}
+Element.prototype.qsa = function (selector) {
+   return [...this.querySelectorAll(selector)]
+}
+```
+
+#
+
 ### document.createElement()
 
 ```javascript
