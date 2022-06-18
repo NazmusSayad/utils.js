@@ -1,5 +1,15 @@
 #
 
+### DisableScroll
+- DisableScroll.enable()
+- DisableScroll.disable()
+
+```javascript
+var __assign=this&&this.__assign||function(){return __assign=Object.assign||function(e){for(var n,t=1,o=arguments.length;t<o;t++)for(var l in n=arguments[t])Object.prototype.hasOwnProperty.call(n,l)&&(e[l]=n[l]);return e},__assign.apply(this,arguments)},canUseDOM=function(){return"undefined"!=typeof window&&!!window.document&&!!window.document.createElement},DisableScroll=function(){function e(){var e=this;this.handleWheel=function(e){e.preventDefault()},this.handleScroll=function(){window.scrollTo.apply(window,e.lockToScrollPos)},this.handleKeydown=function(n){var t=e.options.keyboardKeys;["INPUT","TEXTAREA"].includes(n.target.tagName)&&(t=t.filter((function(n){return!e.options.authorizedInInputs.includes(n)}))),t.includes(n.keyCode)&&n.preventDefault()},this.element=null,this.lockToScrollPos=[0,0],this.options={authorizedInInputs:[32,37,38,39,40],disableKeys:!0,disableScroll:!0,disableWheel:!0,keyboardKeys:[32,33,34,35,36,37,38,39,40]},canUseDOM()&&(this.element=document.scrollingElement)}return e.prototype.disable=function(e,n){var t,o,l,s;if(canUseDOM()){this.element=e||this.element,this.options=__assign(__assign({},this.options),n);var i=this.options,d=i.disableKeys,a=i.disableScroll;i.disableWheel&&(document.addEventListener("wheel",this.handleWheel,{passive:!1}),document.addEventListener("touchmove",this.handleWheel,{passive:!1})),a&&(this.lockToScrollPos=[null!==(o=null===(t=this.element)||void 0===t?void 0:t.scrollLeft)&&void 0!==o?o:0,null!==(s=null===(l=this.element)||void 0===l?void 0:l.scrollTop)&&void 0!==s?s:0],document.addEventListener("scroll",this.handleScroll,{passive:!1})),d&&document.addEventListener("keydown",this.handleKeydown,{passive:!1})}},e.prototype.enable=function(){canUseDOM()&&(document.removeEventListener("wheel",this.handleWheel),document.removeEventListener("touchmove",this.handleWheel),document.removeEventListener("scroll",this.handleScroll),document.removeEventListener("keydown",this.handleKeydown))},e}();export default new DisableScroll;
+```
+
+#
+
 ### document.querySelector()
 
 ```javascript
