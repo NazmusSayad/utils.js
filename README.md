@@ -33,16 +33,19 @@ const qsa = (selector, parent = document) => {
 ### document.querySelectorAll() && document.querySelector()
 
 ```javascript
-Document.prototype.qs = function (selector) {
-   return this.querySelector(selector)
-}
-Element.prototype.qs = function (selector) {
-   return this.querySelector(selector)
-}
+Document.prototype.qs = Document.prototype.querySelector
+Element.prototype.qs = Document.prototype.querySelector
+
 Document.prototype.qsa = function (selector) {
+   if (!arguments.length)
+      throw new Error("Failed to execute 'querySelector' on 'Document': 1 argument required, but only 0 present.")
+
    return [...this.querySelectorAll(selector)]
 }
 Element.prototype.qsa = function (selector) {
+   if (!arguments.length)
+      throw new Error("Failed to execute 'querySelector' on 'Document': 1 argument required, but only 0 present.")
+
    return [...this.querySelectorAll(selector)]
 }
 ```
