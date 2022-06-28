@@ -66,6 +66,12 @@ Element.prototype.qsa = function (selector) {
 ### document.createElement()
 
 ```javascript
+const HTML = (body = "<div></div>") => {
+   return new DOMParser().parseFromString(body, "text/html").body.firstElementChild
+}
+```
+
+```javascript
 const createElement = (type, html = "", options = {}) => {
    const element = document.createElement(type)
    element.innerHTML = html
