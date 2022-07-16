@@ -1,0 +1,8 @@
+{
+  "include": ["./index.ts"],
+  "compilerOptions": {
+    "target": "es6",
+    "outFile": "index.js",
+    "sourceMap": true
+  }
+}
