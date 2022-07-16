@@ -3,7 +3,7 @@
     "start": "tsc --watch",
     "build": "npm run node & npm run tsc & npm run minify",
     "node":"node ./server.js",
-    "tsc": "tsc --target es3 --sourceMap false",
+    "tsc": "tsc --sourceMap false",
     "minify": "minify ./index.js --out-file ./index.js"
   },
   "devDependencies": {
